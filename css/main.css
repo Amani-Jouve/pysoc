@@ -1,0 +1,84 @@
+/*MDN : Mozilla Developer Network*/
+
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap'); /*import de la police*/
+
+html{
+    height:100%;
+}
+
+body{
+    height:100%;/*sans vh, on sait pas 100% de quoi, on a changé le html et on est content*/
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:red;
+    background:rgb(141,245,172); /*on déoptimise*/
+    background:#8Df5ac;/*rouge+vert+bleu*/
+    background:hsl(300,50%,75%);
+    background:rgba(0,255,127,0);
+    background:hsla(240,25%,75%,.75);
+    background:#0000FF70;
+    background:#fff
+    /* background-image:radial-gradient(#0ff,#fff,#f0f);
+    background-image:linear-gradient(#FFF,#0fb);dégradé de deux couleurs */
+   
+}
+header{
+    height:15vh; /*15% de la zone utile*/
+    display:flex;
+    justify-content:space-between;/* on met de l'espace entre les trucs*/
+}
+
+h1 {
+    letter-spacing: 1rem;
+    font-weight: bold; /*pas supporté par cette police*/
+} 
+
+h1,h2,h3{
+    font-family:"rock salt", sans-serif;/* on met des guillemets car la police contient un espace*/
+    text-align:center;
+}
+
+
+/*Images dans un header*/
+.HdImg {
+    height:100%;
+}
+
+.GreyShadow{
+    text-shadow: 0 0 .33rem #00f,0 0 .9rem #555 ;
+}
+pre {
+    font-size:1.05rem; 
+}
+
+.member {
+    background:#fff;
+    border:#000 solid .1rem;
+    width:10rem;
+    text-align:center;
+    border-radius:1rem;
+    margin: 1rem;
+}
+
+/* sélecteur hiérarchique ascendant (member)-descendant (img) */
+.member img{
+    width:80%;
+    margin:10%; /*les marges doivent être divisées par 2 car marges des deux côtés*/
+    border-radius: 50%; /*pour l'arrondi des images*/
+}
+#members{
+    display:flex;
+    flex-wrap:wrap; /*On lit dans le sens normal*/
+    justify-content:space-evenly; /*Les éléments sont espacés équitablement.*/   
+}
+.boy{
+    background-image:linear-gradient(#00b,#fff);
+}
+.girl{
+    background-image:linear-gradient(#0a0,#fff);
+}
+
+header,#intro{
+    width:90%;
+    margin:auto; /*il fait sa life et les marges se repartissent //se répartissent automatiquement*/
+}

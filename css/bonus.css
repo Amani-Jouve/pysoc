@@ -1,0 +1,10 @@
+.violet{
+    background:#800080;
+    color:#fff; /*c'est pour la couleur du texte*/
+}
+
+.jb-background{
+    background-image:url(../pics/jb-background.jpg); /*on commence par../ et le menu s'affice*/
+    background-size:cover; /*pour déformer et que ça colle dans la box grise*/
+    color:#fff;
+}

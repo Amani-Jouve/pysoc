@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- on change la langue -->
+<html lang="fr"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- on change le nom du doc -->
+    <title>Candidature</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bonus.css">
+    <!-- on a changé la href avec le notre bonus -->
+</head>
+<body class="container"> 
+    <!-- on n'a pas le choix de la class, obligation -->
+    <div class="jumbotron jb-background">
+        <h1 class="display-4">Rejoignez-nous!</h1>
+
+        <!-- lorem*2 pour avoir des mots==> donne 2 paragraphes -->
+        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet atque minus corrupti, cupiditate saepe reprehenderit molestias vel velit iure quia nostrum at quos nisi dignissimos? Eveniet nemo quibusdam aliquid voluptas?
+        Omnis fugit doloribus nisi.</p>
+
+        <hr class="my-4">
+        <!-- ligne de séparation, my-4:MeF ici : m:margin,y:ordonnée x. 4: ici est large (avant extra-large)-->
+
+        <p>Pour plus d'information sur le langage Python, n'hésitez pas à cliquer sur le bouton ci-dessous</p>
+
+        <p class="lead">
+          <a class="btn violet btn-lg" href="https://www.python.org/" role="button">Plus de détail</a>
+        </p>
+        <!-- remarquer que chaque balise a sa classe -->
+        <!-- on met violet au lieu de btn-info car on a lié le fichier bonus.cc -->
+        <!-- btn violet btn-lg : enchainement de 3 classes -->
+        <!-- effet de cascade, si je lui donne violet primary, c'est le bleu qui prime car il écrase l'autre -->
+
+      </div>
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Candidature</li>
+        </ol>
+      </nav>
+
+      <!-- on crée le formulaire -->
+      <form action="save.php" method="post">
+      <div class="form-group">
+          <label for="fname">Prénom</label>
+          <input type="text" name="fname" id="fname" 
+          class="form-control" required>
+        </div>
+      <!-- On tape qcq trucs + tab et c'est joué -->
+      <div class="form-group">
+          <label for="dod">Date de naissance</label>
+          <input type="date" name:"dob" id=""dob" class=""form-control">
+      </div>
+      <div class="form-group">
+          <label for:"region">Région</label>
+          <select name:"" id="region" class="form-control">
+              <option value="">---Choissez une région ---
+            </option>
+            <option value="IDF">Ile de France
+            </option>
+            <option value="GDE">Grand Est
+            </option>
+            <option value="OCC">Occitanie   
+            </option>
+                  </select>
+      </div>
+      <div class:"form-group">
+          <label for="salary">prétention salariale
+              <input type="number" name="salary" id="salary" class="form-control" min="1600" max="4000" value="2800" step="100">
+              <!-- 2800 valeur par défaut, si on tape 3M€ ça marche + on avance de 100 à 100 sinon on avance de 1+name pour le back et id ==> identifie pour le côté front-->
+          </label>
+      </div>
+      <div class:"form-check">
+          <input type="radio" name="location" id="TT" class="form-check-input" value="Télétravail"><label class="form-check-label" for="TT">Télétravail</label>
+        </div>
+
+        <div class:"form-check">
+          <input type="radio" name="location" id="LT" class="form-check-input" value="Lieu de travail" checked="checked"><label class="form-check-label" for="LT">Lieu de travail</label>
+        </div>
+
+        <div class:"form-check">
+          <input type="radio" name="location" id="MX" class="form-check-input" value="Mixte"><label class="form-check-label" for="MX">Mixte</label>    
+      </div>
+
+      <button type="submit" class="btn violet btn-lg my-4">Postuler</button>
+
+    </form>
+
+</body>
+</html>

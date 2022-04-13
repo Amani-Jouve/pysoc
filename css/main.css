@@ -17,13 +17,13 @@ body{
     background:rgba(0,255,127,0);
     background:hsla(240,25%,75%,.75);
     background:#0000FF70;
-    background:#fff
+    background:#fff;
     /* background-image:radial-gradient(#0ff,#fff,#f0f);
     background-image:linear-gradient(#FFF,#0fb);dégradé de deux couleurs */
    
 }
 header{
-    height:15vh; /*15% de la zone utile*/
+    /*height:15vh/*; /*15% de la zone utile, ça déborde et on peut pas espacer ce qu'il y a en dessous, sans ça on lui demande de s'adapter aux tailles des éléments dedans*/
     display:flex;
     justify-content:space-between;/* on met de l'espace entre les trucs*/
 }
@@ -38,10 +38,10 @@ h1,h2,h3{
     text-align:center;
 }
 
-
 /*Images dans un header*/
 .HdImg {
-    height:100%;
+    /*height:100%;*/
+    height:5rem; 
 }
 
 .GreyShadow{
@@ -60,7 +60,7 @@ pre {
     margin: 1rem;
 }
 
-/* sélecteur hiérarchique ascendant (member)-descendant (img) */
+/* sélecteur hiérarchique ascendant (member)-descendant marqué par un espace (img) */
 .member img{
     width:80%;
     margin:10%; /*les marges doivent être divisées par 2 car marges des deux côtés*/
@@ -82,3 +82,42 @@ header,#intro{
     width:90%;
     margin:auto; /*il fait sa life et les marges se repartissent //se répartissent automatiquement*/
 }
+
+/*encore ascendant puis descendant séparés par un espace et concerne par exemple uniquement les ul du menu et pas d'autres*/
+
+#menu{
+    margin: 5rem 0;
+    background: #00F;
+    padding:1rem 0;
+    position:sticky; /*position figé et qui bouge ;) */
+    top:0;
+}
+#menu ul{
+    list-style:none; /*type de puces à afficher, ici rien*/  
+    padding:0;
+    display:flex; 
+    flex-wrap:wrap; /*pour être responsive*/
+    justify-content:space-evenly; /* distribué équitablement sur la largeur*/
+    /*bloquer ce menu, tjs accessible*/
+}
+/*li{
+    border-radius:1rem;
+    margin:1rem;
+    padding:0;
+    background:#0fff;
+    border-radius:1rem;
+    width: 30vh;
+    text-align:center;
+}*/
+
+#menu a{ /* parent indirect, ascendant:cette méthode est plus sympa à maintenir que parent/enfant*/
+    font-family:"rock salt",sans-serif; /*sans-sherif sans guillemets car pas d'espace*/
+    color:#eee; /*ici c'est la couleur de la police*/
+    text-decoration: none;
+    padding:1rem;
+    transition: all 750ms ease-in-out;/*la propriété qui va permettre de passer d'un état à autre : quand, comment/allure...c'est une fonctionnalité de taré! ease-in-out linéraire de x s à y s rapidement au début et plus smooth à la fin*/ /*Stp n'oublie pas de coller les unités*/
+}
+#menu a:hover{/*une pseudo classe est tjs collée au sélecteur de base sinon ça ne marche pas!!*/
+    background:#eee;
+    color:#00F;
+}  
